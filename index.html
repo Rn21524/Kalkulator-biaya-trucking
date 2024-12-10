@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kalkulator Biaya Trucking</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://www.gstatic.com/charts/loader.js"></script>
+</head>
+<body>
+    <div class="container">
+        <h1>Kalkulator Biaya Trucking</h1>
+        <form id="calculatorForm">
+            <label for="distance">Jarak (km):</label>
+            <input type="number" id="distance" name="distance" required><br><br>
+
+            <label for="fuelPrice">Harga Bahan Bakar (Rp):</label>
+            <input type="number" id="fuelPrice" name="fuelPrice" required><br><br>
+
+            <label for="fuelConsumption">Konsumsi Bahan Bakar (km/l):</label>
+            <input type="number" id="fuelConsumption" name="fuelConsumption" required><br><br>
+
+            <label for="toll">Biaya Tol (Rp):</label>
+            <input type="number" id="toll" name="toll" required><br><br>
+
+            <label for="laborCost">Biaya Tenaga Kerja (Rp/jam):</label>
+            <input type="number" id="laborCost" name="laborCost" required><br><br>
+
+            <label for="duration">Durasi (jam):</label>
+            <input type="number" id="duration" name="duration" required><br><br>
+
+            <label for="overhead">Biaya Overhead (Rp):</label>
+            <input type="number" id="overhead" name="overhead" required><br><br>
+
+            <label for="cargoWeight">Berat Muatan (kg):</label>
+            <input type="number" id="cargoWeight" name="cargoWeight" required><br><br>
+
+            <label for="roundTrips">Jumlah Perjalanan Pulang-Pergi:</label>
+            <input type="number" id="roundTrips" name="roundTrips" required><br><br>
+
+            <label for="vehicleType">Jenis Kendaraan:</label>
+            <select id="vehicleType" name="vehicleType">
+                <option value="small">Truk Kecil</option>
+                <option value="medium">Truk Sedang</option>
+                <option value="large">Truk Besar</option>
+            </select><br><br>
+
+            <button type="button" onclick="calculateCost()">Hitung Biaya</button>
+        </form>
+
+        <div id="result"></div>
+
+        <div id="piechart" style="width: 900px; height: 500px;"></div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
